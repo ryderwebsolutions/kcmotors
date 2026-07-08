@@ -17,8 +17,8 @@ export default function Gallery() {
           <p className="eyebrow">Inside the workshop</p>
           <h2 className="section-heading mt-2">A proper garage, doing proper work</h2>
           <p className="mt-4 text-lg text-navy-500">
-            A glimpse of the day-to-day at KC Motors — these will be swapped for real photos of
-            the workshop once they&apos;re in.
+            The everyday work — tyres, servicing, diagnostics and repairs, carried out properly
+            every time.
           </p>
         </div>
 

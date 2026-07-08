@@ -22,9 +22,6 @@ export default function Reviews() {
             </div>
             <p className="mt-3 font-heading text-4xl font-bold">{business.googleRating}/5</p>
             <p className="mt-1 text-sm text-navy-200">Average rating on {business.ratingSource}</p>
-            <p className="mt-4 text-sm text-navy-300">
-              Customers regularly highlight great workmanship, helpful staff and fair pricing.
-            </p>
           </div>
 
           <div className="rounded-xl2 border-2 border-dashed border-navy-200 p-8 lg:col-span-2">
@@ -32,12 +29,8 @@ export default function Reviews() {
               Real customer reviews coming soon
             </p>
             <p className="mt-2 max-w-lg text-[15px] text-navy-500">
-              This space is reserved for genuine KC Motors customer feedback. We only publish real
-              reviews — nothing here is invented. Once KC Motors shares recent reviews (or a link
-              to the Google Business profile), they&apos;ll replace this placeholder.
-            </p>
-            <p className="mt-4 text-xs font-medium uppercase tracking-wide text-navy-400">
-              Placeholder — replace with real customer feedback
+              This space is reserved for genuine KC Motors customer feedback — we only publish
+              real reviews, nothing invented.
             </p>
           </div>
         </div>

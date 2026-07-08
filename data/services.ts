@@ -70,8 +70,7 @@ export const services: Service[] = [
   {
     slug: "general-maintenance",
     name: "General Maintenance",
-    description:
-      "Air conditioning service, bulb replacement, wiper blades and cabin filters — the small jobs that matter.",
+    description: "Air conditioning service, bulb replacement, wiper blades and cabin filters.",
     icon: "spray",
   },
 ];

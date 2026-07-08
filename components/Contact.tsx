@@ -37,7 +37,7 @@ export default function Contact() {
           <p className="eyebrow">Get in touch</p>
           <h2 className="section-heading mt-2">Contact KC Motors</h2>
           <p className="mt-4 text-lg text-navy-500">
-            No forms to fill in — pick whichever is easiest and we&apos;ll take it from there.
+            No forms to fill in — pick whichever is easiest for you.
           </p>
         </div>
 

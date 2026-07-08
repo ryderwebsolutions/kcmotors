@@ -16,7 +16,7 @@ export default function About() {
         <div>
           <p className="eyebrow">About us</p>
           <h2 className="section-heading mt-2">
-            KC Motors offer car repairs, servicing &amp; sales in Carrick-on-Shannon
+            KC Motors offer car repairs &amp; servicing in Carrick-on-Shannon
           </h2>
           <p className="mt-4 text-lg text-navy-500">
             {business.legalDescriptor}, run by {business.managers.join(" and ")}. We look after the
@@ -25,8 +25,8 @@ export default function About() {
             surrounding area.
           </p>
           <p className="mt-4 text-[15px] leading-relaxed text-navy-500">
-            No jargon, no upselling — just straightforward advice, work done properly, and a
-            garage that&apos;s easy to reach when you need it.
+            Straightforward advice, work done properly, and a garage that&apos;s easy to reach
+            when you need it.
           </p>
 
           <a href="#contact" className="btn-primary mt-8">
