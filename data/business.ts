@@ -8,6 +8,7 @@ export const business = {
   legalDescriptor: "A professional, family-run garage in Carrick-on-Shannon",
   phoneDisplay: "071 961 6809",
   phoneHref: "tel:+353719616809",
+  whatsappUrl: "https://wa.me/353719616809",
   email: "office@kcmotorsrepairs.com",
   emailHref: "mailto:office@kcmotorsrepairs.com",
   managers: ["Kenny Cox", "Lauren Farrell"],

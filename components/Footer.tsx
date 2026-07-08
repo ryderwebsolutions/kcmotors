@@ -2,6 +2,7 @@ import Image from "next/image";
 import { business } from "@/data/business";
 import { services } from "@/data/services";
 import { navLinks } from "@/data/nav";
+import { serviceGroupHref } from "@/data/allServices";
 import { InstagramIcon, FacebookIcon } from "@/components/Icons";
 
 export default function Footer() {
@@ -56,7 +57,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-2 text-sm">
             {services.slice(0, 6).map((s) => (
               <li key={s.slug}>
-                <a href="#services" className="hover:text-lime-400">
+                <a href={serviceGroupHref(s.slug)} className="hover:text-lime-400">
                   {s.name}
                 </a>
               </li>

@@ -1,4 +1,5 @@
 import { serviceIcons } from "@/components/Icons";
+import { serviceGroupHref } from "@/data/allServices";
 
 // Short-label jump links into the matching service card below — mirrors the
 // icon-strip pattern used across most garage sites, without reusing any of
@@ -24,7 +25,7 @@ export default function QuickActions() {
             return (
               <a
                 key={item.slug}
-                href={`#${item.slug}`}
+                href={serviceGroupHref(item.slug)}
                 className={`group flex flex-col items-center gap-3 border-navy-100 px-2 py-7 text-center transition-colors hover:bg-white sm:border-b-0 ${
                   !isLastInRow ? "border-r" : ""
                 } ${i < 3 ? "border-b" : ""} ${!isLastOverall ? "sm:border-r" : ""}`}

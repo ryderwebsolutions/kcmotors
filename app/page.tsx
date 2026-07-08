@@ -1,12 +1,8 @@
 import Hero from "@/components/Hero";
-import TrustStrip from "@/components/TrustStrip";
 import QuickActions from "@/components/QuickActions";
-import Services from "@/components/Services";
+import About from "@/components/About";
 import TyresFirstStop from "@/components/TyresFirstStop";
 import Gallery from "@/components/Gallery";
-import About from "@/components/About";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import Process from "@/components/Process";
 import Reviews from "@/components/Reviews";
 import LocationHours from "@/components/LocationHours";
 import Contact from "@/components/Contact";
@@ -16,14 +12,10 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <TrustStrip />
       <QuickActions />
-      <Services />
+      <About />
       <TyresFirstStop />
       <Gallery />
-      <About />
-      <WhyChooseUs />
-      <Process />
       <Reviews />
       <LocationHours />
       <Contact />

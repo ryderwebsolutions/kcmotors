@@ -27,12 +27,6 @@ export default function Hero() {
             Tyres, Servicing &amp; Vehicle Repairs in Carrick-on-Shannon
           </h1>
 
-          <p className="mt-5 max-w-xl text-lg text-navy-100/90">
-            KC Motors is a professional, family-run garage on Castlecara Road, helping local
-            drivers with tyres, servicing, pre-NCT checks, diagnostics and repairs — done properly,
-            explained clearly.
-          </p>
-
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a href={business.phoneHref} className="btn-primary">
               <PhoneIcon className="h-5 w-5" />
@@ -47,7 +41,7 @@ export default function Hero() {
               <DirectionsIcon className="h-5 w-5" />
               Get Directions
             </a>
-            <a href="#services" className="btn-outline-light">
+            <a href="#about" className="btn-outline-light">
               View Services
             </a>
           </div>
