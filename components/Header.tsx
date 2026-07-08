@@ -12,6 +12,7 @@ import {
   ChevronDownIcon,
   InstagramIcon,
   WhatsAppIcon,
+  FacebookIcon,
 } from "@/components/Icons";
 
 export default function Header() {
@@ -101,6 +102,17 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
+          {business.social.facebook && (
+            <a
+              href={business.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="KC Motors on Facebook (opens in a new tab)"
+              className="hidden h-11 w-11 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900 sm:inline-flex"
+            >
+              <FacebookIcon className="h-5 w-5" />
+            </a>
+          )}
           {business.social.instagram && (
             <a
               href={business.social.instagram}

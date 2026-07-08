@@ -57,8 +57,7 @@ export const business = {
     "TV in waiting area",
   ],
   social: {
-    // [Insert Facebook link when provided by KC Motors]
-    facebook: "",
+    facebook: "https://www.facebook.com/kcmotorss/",
     instagram: "https://www.instagram.com/kc_motors8/",
   },
 } as const;
