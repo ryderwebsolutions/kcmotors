@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  color: #1e2230;
+}
+
+/* Offset scroll targets so the sticky header doesn't cover section headings */
+section[id],
+div[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-[15px] font-semibold transition-colors duration-150;
+  }
+
+  .btn-primary {
+    @apply btn bg-lime text-navy-900 hover:bg-lime-300 active:bg-lime-500;
+  }
+
+  .btn-secondary {
+    @apply btn bg-white text-navy-800 ring-1 ring-inset ring-navy-200 hover:bg-navy-50;
+  }
+
+  .btn-outline-light {
+    @apply btn bg-white/10 text-white ring-1 ring-inset ring-white/40 backdrop-blur-sm hover:bg-white/20;
+  }
+
+  .eyebrow {
+    @apply text-sm font-semibold uppercase tracking-wide text-lime-700;
+  }
+
+  .section-heading {
+    @apply font-heading text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl;
+  }
+}
