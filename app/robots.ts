@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://kcmotors.ie/sitemap.xml",
+    sitemap: "https://kc-motors.ie/sitemap.xml",
   };
 }

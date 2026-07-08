@@ -21,7 +21,7 @@ const body = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://kcmotors.ie";
+const siteUrl = "https://kc-motors.ie";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
