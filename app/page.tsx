@@ -3,6 +3,7 @@ import TrustStrip from "@/components/TrustStrip";
 import QuickActions from "@/components/QuickActions";
 import Services from "@/components/Services";
 import TyresFirstStop from "@/components/TyresFirstStop";
+import Gallery from "@/components/Gallery";
 import About from "@/components/About";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Process from "@/components/Process";
@@ -19,6 +20,7 @@ export default function Home() {
       <QuickActions />
       <Services />
       <TyresFirstStop />
+      <Gallery />
       <About />
       <WhyChooseUs />
       <Process />

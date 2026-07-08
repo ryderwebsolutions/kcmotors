@@ -6,6 +6,7 @@ import {
   ParkingIcon,
   TyreIcon,
 } from "@/components/Icons";
+import Reveal from "@/components/Reveal";
 
 const points = [
   {
@@ -49,7 +50,7 @@ export default function WhyChooseUs() {
           <h2 className="section-heading mt-2">Why local drivers choose KC Motors</h2>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Reveal className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {points.map((point) => (
             <div key={point.title} className="flex gap-4">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-navy-900 text-lime-400">
@@ -61,7 +62,7 @@ export default function WhyChooseUs() {
               </div>
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

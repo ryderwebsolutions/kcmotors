@@ -1,13 +1,19 @@
 import Image from "next/image";
 import { business } from "@/data/business";
 import { placeholderImages } from "@/data/images";
-import { CheckIcon, PhoneIcon } from "@/components/Icons";
+import { CheckIcon, PhoneIcon, ShieldCheckIcon } from "@/components/Icons";
 
 const points = [
   "Tyre fitting and replacement for all makes and models",
   "Puncture repair, wheel alignment, balancing and rotation",
   "TPMS (tyre pressure monitoring) checks",
   "Advice over the phone before you book anything in",
+];
+
+const badges = [
+  { label: "First Stop Branch", detail: "Listed tyre service branch" },
+  { label: "ITIA Member", detail: business.firstStop.memberOf },
+  { label: "Bridgestone Approved", detail: "Silver website status" },
 ];
 
 export default function TyresFirstStop() {
@@ -47,6 +53,21 @@ export default function TyresFirstStop() {
             >
               View First Stop Branch Page
             </a>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            {badges.map((badge) => (
+              <div
+                key={badge.label}
+                className="flex items-center gap-2.5 rounded-lg bg-navy-50 px-3.5 py-2.5 ring-1 ring-navy-100"
+              >
+                <ShieldCheckIcon className="h-4 w-4 shrink-0 text-lime-600" />
+                <div>
+                  <p className="text-xs font-semibold leading-tight text-navy-900">{badge.label}</p>
+                  <p className="text-[11px] leading-tight text-navy-400">{badge.detail}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
           <p className="mt-4 text-sm text-navy-400">

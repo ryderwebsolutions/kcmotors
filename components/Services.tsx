@@ -23,9 +23,9 @@ export default function Services() {
               <div
                 key={service.slug}
                 id={service.slug}
-                className="group flex flex-col rounded-xl2 bg-white p-6 shadow-card ring-1 ring-navy-100 transition-shadow hover:shadow-card-hover"
+                className="group flex flex-col rounded-xl2 bg-white p-6 shadow-card ring-1 ring-navy-100 transition-all duration-200 hover:-translate-y-1 hover:shadow-card-hover hover:ring-lime-200"
               >
-                <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-navy-900 text-lime-400">
+                <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-navy-900 text-lime-400 transition-colors duration-200 group-hover:bg-lime-400 group-hover:text-navy-900">
                   <Icon className="h-6 w-6" />
                 </span>
                 <h3 className="font-heading text-lg font-semibold text-navy-900">{service.name}</h3>
