@@ -1,6 +1,7 @@
 import { services } from "@/data/services";
 import { serviceIcons } from "@/components/Icons";
 import { business } from "@/data/business";
+import AllServices from "@/components/AllServices";
 
 export default function Services() {
   return (
@@ -21,6 +22,7 @@ export default function Services() {
             return (
               <div
                 key={service.slug}
+                id={service.slug}
                 className="group flex flex-col rounded-xl2 bg-white p-6 shadow-card ring-1 ring-navy-100 transition-shadow hover:shadow-card-hover"
               >
                 <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-navy-900 text-lime-400">
@@ -49,6 +51,8 @@ export default function Services() {
             Get in Touch
           </a>
         </div>
+
+        <AllServices />
       </div>
     </section>
   );

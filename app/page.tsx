@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import TrustStrip from "@/components/TrustStrip";
+import QuickActions from "@/components/QuickActions";
 import Services from "@/components/Services";
 import TyresFirstStop from "@/components/TyresFirstStop";
 import About from "@/components/About";
@@ -15,6 +16,7 @@ export default function Home() {
     <>
       <Hero />
       <TrustStrip />
+      <QuickActions />
       <Services />
       <TyresFirstStop />
       <About />
