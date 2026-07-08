@@ -1,28 +1,38 @@
-import { services } from "@/data/services";
 import { serviceIcons } from "@/components/Icons";
 
-// The most commonly searched-for jobs, as fast jump links into the matching
-// service card below — mirrors the "quick action" pattern used across most
-// garage sites, without reusing any of their copy or markup.
-const quickLinks = ["tyres-wheels", "servicing", "pre-nct", "brakes", "batteries", "diagnostics"]
-  .map((slug) => services.find((s) => s.slug === slug))
-  .filter((s): s is NonNullable<typeof s> => Boolean(s));
+// Short-label jump links into the matching service card below — mirrors the
+// icon-strip pattern used across most garage sites, without reusing any of
+// their copy or markup.
+const items = [
+  { slug: "servicing", label: "Servicing", icon: "wrench" },
+  { slug: "pre-nct", label: "Pre-NCT", icon: "clipboard" },
+  { slug: "general-maintenance", label: "Air Con", icon: "spray" },
+  { slug: "brakes", label: "Brakes", icon: "brake" },
+  { slug: "tyres-wheels", label: "Tyres", icon: "tyre" },
+  { slug: "diagnostics", label: "Diagnostics", icon: "scan" },
+] as const;
 
 export default function QuickActions() {
   return (
-    <div className="border-b border-navy-100 bg-white">
-      <div className="container-page py-5">
-        <div className="flex gap-3 overflow-x-auto sm:flex-wrap sm:overflow-visible">
-          {quickLinks.map((service) => {
-            const Icon = serviceIcons[service.icon];
+    <div className="border-b border-navy-100 bg-navy-50">
+      <div className="container-page">
+        <div className="grid grid-cols-3 sm:grid-cols-6">
+          {items.map((item, i) => {
+            const Icon = serviceIcons[item.icon];
+            const isLastInRow = (i + 1) % 3 === 0;
+            const isLastOverall = i === items.length - 1;
             return (
               <a
-                key={service.slug}
-                href={`#${service.slug}`}
-                className="flex shrink-0 items-center gap-2 rounded-full bg-navy-50 px-4 py-2.5 text-sm font-semibold text-navy-800 ring-1 ring-navy-100 transition-colors hover:bg-lime-100 hover:text-navy-900 hover:ring-lime-300"
+                key={item.slug}
+                href={`#${item.slug}`}
+                className={`group flex flex-col items-center gap-3 border-navy-100 px-2 py-7 text-center transition-colors hover:bg-white sm:border-b-0 ${
+                  !isLastInRow ? "border-r" : ""
+                } ${i < 3 ? "border-b" : ""} ${!isLastOverall ? "sm:border-r" : ""}`}
               >
-                <Icon className="h-4 w-4 text-lime-600" />
-                {service.name.split(" & ")[0]}
+                <Icon className="h-9 w-9 text-navy-300 transition-colors group-hover:text-lime-600" />
+                <span className="text-xs font-bold uppercase tracking-wide text-navy-800 sm:text-sm">
+                  {item.label}
+                </span>
               </a>
             );
           })}
