@@ -12,10 +12,10 @@ export default function Hero() {
         fill
         priority
         sizes="100vw"
-        className="object-cover opacity-45"
+        className="object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-900/85 via-navy-900/88 to-navy-900" />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-900/40 via-transparent to-transparent lg:from-navy-900/60" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy-900/90 via-navy-900/80 to-navy-900/60 lg:from-navy-900/95 lg:via-navy-900/55 lg:to-navy-900/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-transparent to-transparent" />
 
       <div className="container-page relative py-20 sm:py-28 lg:grid lg:grid-cols-[1fr,380px] lg:items-center lg:gap-12 lg:py-32">
         <div className="max-w-2xl">
@@ -23,7 +23,7 @@ export default function Hero() {
             Local garage · Carrick-on-Shannon
           </span>
 
-          <h1 className="section-heading mt-5 text-4xl text-white sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 font-heading text-5xl font-bold uppercase leading-[1.05] tracking-tight text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.5)] sm:text-6xl lg:text-7xl">
             Tyres, Servicing &amp; Vehicle Repairs in Carrick-on-Shannon
           </h1>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Inter, Oswald } from "next/font/google";
 import "./globals.css";
 import { business } from "@/data/business";
 import { services } from "@/data/services";
@@ -7,9 +7,9 @@ import StickyMobileCTA from "@/components/StickyMobileCTA";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const heading = Outfit({
+const heading = Oswald({
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
+  weight: ["500", "600", "700"],
   variable: "--font-heading",
   display: "swap",
 });

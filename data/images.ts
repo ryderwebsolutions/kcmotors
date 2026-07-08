@@ -14,9 +14,9 @@
 
 export const placeholderImages = {
   hero: {
-    src: "/images/placeholder/hero.jpg",
-    alt: "Car raised on a workshop lift with an open bonnet — replace with a real KC Motors workshop photo",
-    replaceNote: "Replace with KC Motors workshop / car-on-lift photo",
+    src: "/images/kcmotorsfront.png",
+    alt: "The KC Motors garage on Castlecara Road, Carrick-on-Shannon",
+    replaceNote: "Real KC Motors photo",
   },
   about: {
     src: "/images/kcmotorsfront.png",
