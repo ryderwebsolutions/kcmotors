@@ -29,18 +29,18 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-navy-900/95 backdrop-blur supports-[backdrop-filter]:bg-navy-900/90">
       <div className="container-page flex h-16 items-center justify-between sm:h-20">
-        <a href="#home" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
+        <a href="#home" className="flex items-center gap-2 sm:gap-2.5" onClick={() => setOpen(false)}>
           <Image
             src="/images/kc-motors-logo.jpg"
             alt="KC Motors logo"
             width={44}
             height={44}
-            className="h-10 w-10 rounded-md sm:h-11 sm:w-11"
+            className="h-9 w-9 rounded-md sm:h-11 sm:w-11"
             priority
           />
-          <span className="font-heading text-lg font-bold leading-tight text-white sm:text-xl">
+          <span className="font-heading text-base font-bold leading-tight text-white sm:text-xl">
             KC Motors
-            <span className="block text-[11px] font-medium tracking-wide text-lime-400">
+            <span className="hidden text-[11px] font-medium tracking-wide text-lime-400 sm:block">
               Driving Trust
             </span>
           </span>
@@ -101,16 +101,16 @@ export default function Header() {
             ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1 sm:gap-3">
           {business.social.facebook && (
             <a
               href={business.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="KC Motors on Facebook (opens in a new tab)"
-              className="hidden h-11 w-11 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900 sm:inline-flex"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900 sm:h-11 sm:w-11"
             >
-              <FacebookIcon className="h-5 w-5" />
+              <FacebookIcon className="h-3.5 w-3.5 sm:h-5 sm:w-5" />
             </a>
           )}
           {business.social.instagram && (
@@ -119,9 +119,9 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="KC Motors on Instagram (opens in a new tab)"
-              className="hidden h-11 w-11 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900 sm:inline-flex"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900 sm:h-11 sm:w-11"
             >
-              <InstagramIcon className="h-5 w-5" />
+              <InstagramIcon className="h-3.5 w-3.5 sm:h-5 sm:w-5" />
             </a>
           )}
           <a
@@ -129,9 +129,9 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Message KC Motors on WhatsApp (opens in a new tab)"
-            className="hidden h-11 w-11 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900 sm:inline-flex"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900 sm:h-11 sm:w-11"
           >
-            <WhatsAppIcon className="h-5 w-5" />
+            <WhatsAppIcon className="h-3.5 w-3.5 sm:h-5 sm:w-5" />
           </a>
           <a
             href={business.phoneHref}
@@ -142,13 +142,13 @@ export default function Header() {
           </a>
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full text-white lg:hidden"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full text-white sm:h-11 sm:w-11 lg:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
           >
-            {open ? <CloseIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
+            {open ? <CloseIcon className="h-5 w-5 sm:h-6 sm:w-6" /> : <MenuIcon className="h-5 w-5 sm:h-6 sm:w-6" />}
           </button>
         </div>
       </div>
