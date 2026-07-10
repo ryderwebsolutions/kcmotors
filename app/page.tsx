@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import QuickActions from "@/components/QuickActions";
+import ActionCards from "@/components/ActionCards";
 import About from "@/components/About";
 import TyresFirstStop from "@/components/TyresFirstStop";
 import Gallery from "@/components/Gallery";
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <Hero />
       <QuickActions />
+      <ActionCards />
       <About />
       <TyresFirstStop />
       <Gallery />

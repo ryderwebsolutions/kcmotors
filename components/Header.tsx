@@ -15,6 +15,11 @@ import {
   FacebookIcon,
 } from "@/components/Icons";
 
+const topNavLinks = navLinks.filter((link) => link.href !== "#tyres");
+
+const shortcutLinkClasses =
+  "border-l border-white/15 pl-4 text-xs font-bold uppercase tracking-wide text-navy-200 transition-colors first:border-l-0 first:pl-0 hover:text-lime-400";
+
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
@@ -28,80 +33,72 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-navy-900/95 backdrop-blur supports-[backdrop-filter]:bg-navy-900/90">
-      <div className="container-page flex h-16 items-center justify-between sm:h-20">
-        <a href="#home" className="flex items-center gap-2 sm:gap-2.5" onClick={() => setOpen(false)}>
+      <div className="container-page flex items-center justify-between gap-6 py-3 sm:py-4 lg:py-5">
+        <a href="#home" className="flex shrink-0 items-center" onClick={() => setOpen(false)}>
           <Image
-            src="/images/kc-motors-logo.jpg"
-            alt="KC Motors logo"
-            width={44}
-            height={44}
-            className="h-9 w-9 rounded-md sm:h-11 sm:w-11"
+            src="/images/kc-motors-logo-wide.png"
+            alt="KC Motors — Driven by Quality"
+            width={1963}
+            height={819}
+            className="h-11 w-auto sm:h-14 lg:h-24"
             priority
           />
-          <span className="font-heading text-base font-bold leading-tight text-white sm:text-xl">
-            KC Motors
-            <span className="hidden text-[11px] font-medium tracking-wide text-lime-400 sm:block">
-              Driving Trust
-            </span>
-          </span>
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
-          <a
-            href="#home"
-            className="text-[15px] font-medium text-navy-100 transition-colors hover:text-lime-400"
-          >
-            Home
-          </a>
-
-          <div className="group relative">
-            <button
-              type="button"
-              className="flex items-center gap-1 text-[15px] font-medium text-navy-100 transition-colors hover:text-lime-400"
-            >
-              Services
-              <ChevronDownIcon className="h-4 w-4 transition-transform duration-150 group-hover:rotate-180" />
-            </button>
-
-            <div className="invisible absolute left-1/2 top-full z-50 w-[640px] -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
-              <div className="rounded-xl2 bg-navy-900 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)] ring-1 ring-white/10">
-                <div className="grid grid-cols-3 gap-x-6 gap-y-1">
-                  {allServices.map((item) => (
-                    <a
-                      key={item.name}
-                      href={serviceGroupHref(item.groupSlug)}
-                      className="flex items-center gap-2 rounded-md px-2 py-1.5 text-sm text-navy-100 transition-colors hover:bg-white/5 hover:text-lime-400"
-                    >
-                      <span className="text-lime-400">&raquo;</span>
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-                <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-4">
-                  <span className="text-sm text-navy-300">Not sure what you need?</span>
-                  <a href={business.phoneHref} className="btn-primary">
-                    <PhoneIcon className="h-4 w-4" />
-                    Call Us
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {navLinks
-            .filter((link) => link.label !== "Home")
-            .map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-[15px] font-medium text-navy-100 transition-colors hover:text-lime-400"
-              >
+        <div className="hidden flex-1 flex-col items-end gap-3 lg:flex">
+          <nav className="flex items-center" aria-label="Primary">
+            {topNavLinks.map((link) => (
+              <a key={link.href} href={link.href} className={shortcutLinkClasses}>
                 {link.label}
               </a>
             ))}
-        </nav>
+          </nav>
 
-        <div className="flex items-center gap-1 sm:gap-3">
+          <div className="flex items-center gap-5">
+            <a
+              href={business.phoneHref}
+              className="text-[15px] font-semibold text-navy-100 transition-colors hover:text-lime-400"
+            >
+              Call us: <span className="font-bold text-lime-400">{business.phoneDisplay}</span>
+            </a>
+
+            <div className="flex items-center gap-2">
+              {business.social.facebook && (
+                <a
+                  href={business.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="KC Motors on Facebook (opens in a new tab)"
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900"
+                >
+                  <FacebookIcon className="h-3.5 w-3.5" />
+                </a>
+              )}
+              {business.social.instagram && (
+                <a
+                  href={business.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="KC Motors on Instagram (opens in a new tab)"
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900"
+                >
+                  <InstagramIcon className="h-3.5 w-3.5" />
+                </a>
+              )}
+              <a
+                href={business.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Message KC Motors on WhatsApp (opens in a new tab)"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900"
+              >
+                <WhatsAppIcon className="h-3.5 w-3.5" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-1 sm:gap-3 lg:hidden">
           {business.social.facebook && (
             <a
               href={business.social.facebook}
@@ -142,7 +139,7 @@ export default function Header() {
           </a>
           <button
             type="button"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-full text-white sm:h-11 sm:w-11 lg:hidden"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full text-white sm:h-11 sm:w-11"
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             aria-controls="mobile-menu"
@@ -150,6 +147,54 @@ export default function Header() {
           >
             {open ? <CloseIcon className="h-5 w-5 sm:h-6 sm:w-6" /> : <MenuIcon className="h-5 w-5 sm:h-6 sm:w-6" />}
           </button>
+        </div>
+      </div>
+
+      <div className="hidden border-t border-white/10 lg:block">
+        <div className="container-page flex items-center justify-center py-2.5">
+          <div className="group relative border-l border-white/15 pl-4 first:border-l-0 first:pl-0">
+            <button
+              type="button"
+              className="flex items-center gap-1 text-xs font-bold uppercase tracking-wide text-navy-200 transition-colors hover:text-lime-400"
+            >
+              Repairs &amp; Services
+              <ChevronDownIcon className="h-3.5 w-3.5 transition-transform duration-150 group-hover:rotate-180" />
+            </button>
+
+            <div className="invisible absolute left-1/2 top-full z-50 w-[640px] -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
+              <div className="rounded-xl2 bg-navy-900 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)] ring-1 ring-white/10">
+                <div className="grid grid-cols-3 gap-x-6 gap-y-1">
+                  {allServices.map((item) => (
+                    <a
+                      key={item.name}
+                      href={serviceGroupHref(item.groupSlug)}
+                      className="flex items-center gap-2 rounded-md px-2 py-1.5 text-sm text-navy-100 transition-colors hover:bg-white/5 hover:text-lime-400"
+                    >
+                      <span className="text-lime-400">&raquo;</span>
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+                <div className="mt-4 flex items-center justify-between border-t border-white/10 pt-4">
+                  <span className="text-sm text-navy-300">Not sure what you need?</span>
+                  <a href={business.phoneHref} className="btn-primary">
+                    <PhoneIcon className="h-4 w-4" />
+                    Call Us
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href={serviceGroupHref("servicing")} className={shortcutLinkClasses}>
+            Servicing
+          </a>
+          <a href="#tyres" className={shortcutLinkClasses}>
+            Tyres
+          </a>
+          <a href={serviceGroupHref("diagnostics")} className={shortcutLinkClasses}>
+            Diagnostics
+          </a>
         </div>
       </div>
 
