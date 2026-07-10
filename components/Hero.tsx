@@ -19,11 +19,7 @@ export default function Hero() {
 
       <div className="container-page relative py-20 sm:py-28 lg:grid lg:grid-cols-[1fr,380px] lg:items-center lg:gap-12 lg:py-32">
         <div className="max-w-2xl">
-          <span className="inline-flex items-center rounded-full bg-white/10 px-4 py-1.5 text-sm font-semibold text-lime-400 ring-1 ring-inset ring-white/15">
-            Local garage · Carrick-on-Shannon
-          </span>
-
-          <h1 className="mt-5 font-heading text-5xl font-bold uppercase leading-[1.05] tracking-tight text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.5)] sm:text-6xl lg:text-7xl">
+          <h1 className="font-heading text-5xl font-bold uppercase leading-[1.05] tracking-tight text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.5)] sm:text-6xl lg:text-7xl">
             Tyres, Servicing &amp; Vehicle Repairs in Carrick-on-Shannon
           </h1>
 
