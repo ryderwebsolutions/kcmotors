@@ -130,7 +130,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <JsonLd />
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-lime focus:px-4 focus:py-2 focus:font-semibold focus:text-navy-900"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-lime focus:px-4 focus:py-2 focus:font-semibold focus:text-white"
         >
           Skip to content
         </a>

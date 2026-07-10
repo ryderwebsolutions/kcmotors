@@ -69,7 +69,7 @@ export default function Header() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="KC Motors on Facebook (opens in a new tab)"
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900"
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-white"
                 >
                   <FacebookIcon className="h-3.5 w-3.5" />
                 </a>
@@ -80,7 +80,7 @@ export default function Header() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="KC Motors on Instagram (opens in a new tab)"
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900"
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-white"
                 >
                   <InstagramIcon className="h-3.5 w-3.5" />
                 </a>
@@ -90,7 +90,7 @@ export default function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Message KC Motors on WhatsApp (opens in a new tab)"
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-white"
               >
                 <WhatsAppIcon className="h-3.5 w-3.5" />
               </a>
@@ -105,7 +105,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="KC Motors on Facebook (opens in a new tab)"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900 sm:h-11 sm:w-11"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-white sm:h-11 sm:w-11"
             >
               <FacebookIcon className="h-3.5 w-3.5 sm:h-5 sm:w-5" />
             </a>
@@ -116,7 +116,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="KC Motors on Instagram (opens in a new tab)"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900 sm:h-11 sm:w-11"
+              className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-white sm:h-11 sm:w-11"
             >
               <InstagramIcon className="h-3.5 w-3.5 sm:h-5 sm:w-5" />
             </a>
@@ -126,7 +126,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Message KC Motors on WhatsApp (opens in a new tab)"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900 sm:h-11 sm:w-11"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/5 text-navy-100 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-white sm:h-11 sm:w-11"
           >
             <WhatsAppIcon className="h-3.5 w-3.5 sm:h-5 sm:w-5" />
           </a>

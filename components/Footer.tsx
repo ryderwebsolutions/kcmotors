@@ -31,7 +31,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="KC Motors on Instagram (opens in a new tab)"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-navy-200 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-navy-200 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-white"
               >
                 <InstagramIcon className="h-5 w-5" />
               </a>
@@ -42,7 +42,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="KC Motors on Facebook (opens in a new tab)"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-navy-200 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-navy-900"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-navy-200 ring-1 ring-white/10 transition-colors hover:bg-lime-400 hover:text-white"
               >
                 <FacebookIcon className="h-5 w-5" />
               </a>
