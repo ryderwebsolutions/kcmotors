@@ -34,7 +34,7 @@ const cards = [
 
 export default function ActionCards() {
   return (
-    <div className="bg-navy-50 pb-16 pt-10 sm:pb-20 sm:pt-14">
+    <div className="bg-navy-50 pb-12 pt-8 sm:pb-14 sm:pt-10">
       <div className="container-page">
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {cards.map((card) => (

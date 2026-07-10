@@ -3,7 +3,7 @@ import { PinIcon, ClockIcon, PhoneIcon, MailIcon, DirectionsIcon } from "@/compo
 
 export default function LocationHours() {
   return (
-    <section id="location" className="bg-navy-50 py-20 sm:py-24">
+    <section id="location" className="bg-navy-50 py-14 sm:py-16">
       <div className="container-page">
         <div className="max-w-2xl">
           <p className="eyebrow">Find us</p>

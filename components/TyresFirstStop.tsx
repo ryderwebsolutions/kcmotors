@@ -18,7 +18,7 @@ const badges = [
 
 export default function TyresFirstStop() {
   return (
-    <section id="tyres" className="py-20 sm:py-24">
+    <section id="tyres" className="py-14 sm:py-16">
       <div className="container-page grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
         <div>
           <p className="eyebrow">Tyres made simple</p>

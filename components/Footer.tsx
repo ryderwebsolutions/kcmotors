@@ -7,7 +7,7 @@ import { InstagramIcon, FacebookIcon } from "@/components/Icons";
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-950 pb-24 pt-16 text-navy-300 lg:pb-16">
+    <footer className="bg-navy-950 pb-24 pt-10 text-navy-300 lg:pb-10">
       <div className="container-page grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2.5">

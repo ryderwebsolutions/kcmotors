@@ -24,7 +24,7 @@ function FaqJsonLd() {
 
 export default function FAQ() {
   return (
-    <section className="bg-navy-50 py-20 sm:py-24">
+    <section className="bg-navy-50 py-14 sm:py-16">
       <FaqJsonLd />
       <div className="container-page">
         <div className="max-w-2xl">

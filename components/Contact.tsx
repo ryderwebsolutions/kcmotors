@@ -31,7 +31,7 @@ const actions = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 sm:py-24">
+    <section id="contact" className="py-14 sm:py-16">
       <div className="container-page">
         <div className="max-w-2xl">
           <p className="eyebrow">Get in touch</p>

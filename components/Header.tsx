@@ -33,7 +33,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-navy-900/95 backdrop-blur supports-[backdrop-filter]:bg-navy-900/90">
-      <div className="container-page flex items-center justify-between gap-6 py-3 sm:py-3.5 lg:py-4">
+      <div className="container-page relative flex items-center justify-between gap-6 py-3 sm:py-3.5 lg:py-4">
         <a href="#home" className="flex shrink-0 items-center" onClick={() => setOpen(false)}>
           <Image
             src="/images/kc-motors-logo-transparent.png"
@@ -44,6 +44,15 @@ export default function Header() {
             priority
           />
         </a>
+
+        <div className="pointer-events-none absolute inset-0 hidden items-center justify-center lg:flex">
+          <a
+            href={business.phoneHref}
+            className="pointer-events-auto text-2xl font-black tracking-tight text-white transition-colors hover:text-lime-400"
+          >
+            {business.phoneDisplay}
+          </a>
+        </div>
 
         <div className="hidden flex-1 flex-col items-end gap-2.5 lg:flex">
           <nav className="flex items-center" aria-label="Primary">
@@ -57,10 +66,10 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <a
               href={business.phoneHref}
-              className="flex items-center gap-1.5 text-[15px] font-semibold text-navy-100 transition-colors hover:text-lime-400"
+              className="btn-primary px-4 py-2 text-xs"
             >
-              <PhoneIcon className="h-4 w-4 text-lime-400" />
-              Call us: <span className="font-bold text-lime-400">{business.phoneDisplay}</span>
+              <PhoneIcon className="h-4 w-4" />
+              Call Now
             </a>
 
             <div className="flex items-center gap-2 border-l border-white/15 pl-4">

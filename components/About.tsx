@@ -11,7 +11,7 @@ const thumbnails = [
 
 export default function About() {
   return (
-    <section id="about" className="py-20 sm:py-24">
+    <section id="about" className="py-14 sm:py-16">
       <div className="container-page grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
         <div>
           <p className="eyebrow">About us</p>

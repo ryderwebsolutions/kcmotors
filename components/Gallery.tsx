@@ -11,7 +11,7 @@ const tiles = [
 
 export default function Gallery() {
   return (
-    <section className="py-20 sm:py-24">
+    <section className="py-14 sm:py-16">
       <div className="container-page">
         <div className="max-w-2xl">
           <p className="eyebrow">Inside the workshop</p>

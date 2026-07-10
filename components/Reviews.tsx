@@ -3,7 +3,7 @@ import { StarIcon } from "@/components/Icons";
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="py-20 sm:py-24">
+    <section id="reviews" className="py-14 sm:py-16">
       <div className="container-page">
         <div className="max-w-2xl">
           <p className="eyebrow">Reputation</p>
