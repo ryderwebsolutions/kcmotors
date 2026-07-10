@@ -33,19 +33,19 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-navy-900/95 backdrop-blur supports-[backdrop-filter]:bg-navy-900/90">
-      <div className="container-page flex items-center justify-between gap-6 py-3 sm:py-4 lg:py-5">
+      <div className="container-page flex items-center justify-between gap-6 py-3 sm:py-3.5 lg:py-4">
         <a href="#home" className="flex shrink-0 items-center" onClick={() => setOpen(false)}>
           <Image
-            src="/images/kc-motors-logo-wide.png"
+            src="/images/kc-motors-logo-transparent.png"
             alt="KC Motors — Driven by Quality"
-            width={1963}
-            height={819}
-            className="h-11 w-auto sm:h-14 lg:h-24"
+            width={1750}
+            height={445}
+            className="h-12 w-auto sm:h-16 lg:h-20"
             priority
           />
         </a>
 
-        <div className="hidden flex-1 flex-col items-end gap-3 lg:flex">
+        <div className="hidden flex-1 flex-col items-end gap-2.5 lg:flex">
           <nav className="flex items-center" aria-label="Primary">
             {topNavLinks.map((link) => (
               <a key={link.href} href={link.href} className={shortcutLinkClasses}>
@@ -54,15 +54,16 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4">
             <a
               href={business.phoneHref}
-              className="text-[15px] font-semibold text-navy-100 transition-colors hover:text-lime-400"
+              className="flex items-center gap-1.5 text-[15px] font-semibold text-navy-100 transition-colors hover:text-lime-400"
             >
+              <PhoneIcon className="h-4 w-4 text-lime-400" />
               Call us: <span className="font-bold text-lime-400">{business.phoneDisplay}</span>
             </a>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 border-l border-white/15 pl-4">
               {business.social.facebook && (
                 <a
                   href={business.social.facebook}
