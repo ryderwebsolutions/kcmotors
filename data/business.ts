@@ -27,7 +27,7 @@ export const business = {
   mapEmbedUrl:
     "https://www.google.com/maps?q=" +
     encodeURIComponent("Castlecara Road, Carrick-on-Shannon, Co. Leitrim, N41 D2R2") +
-    "&output=embed",
+    "&output=embed&z=14",
   hours: [
     { day: "Monday", hours: "08:00 – 17:00" },
     { day: "Tuesday", hours: "08:00 – 17:00" },
