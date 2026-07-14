@@ -14,6 +14,10 @@ export default function PreNctBookingPage() {
       pageTitle="Book Your Pre-NCT Check with KC Motors in Carrick-on-Shannon"
       panelLabel="Pre-NCT Check Booking"
       subject="Pre-NCT Check Booking"
+      reminderOptIn={{
+        label: "Remind me when my next NCT is due",
+        note: "We'll give you a call or text ahead of your next NCT date.",
+      }}
     />
   );
 }

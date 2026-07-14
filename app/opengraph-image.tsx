@@ -7,8 +7,8 @@ export const contentType = "image/png";
 export const alt = "KC Motors — Garage, Tyres & Car Servicing in Carrick-on-Shannon";
 
 export default function OpengraphImage() {
-  const logoData = readFileSync(join(process.cwd(), "public/images/kc-motors-logo.jpg"));
-  const logoSrc = `data:image/jpeg;base64,${logoData.toString("base64")}`;
+  const logoData = readFileSync(join(process.cwd(), "public/images/kc-motors-logo-wide.png"));
+  const logoSrc = `data:image/png;base64,${logoData.toString("base64")}`;
 
   return new ImageResponse(
     (
@@ -20,40 +20,19 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          backgroundColor: "#151824",
+          backgroundColor: "#000000",
           backgroundImage:
-            "radial-gradient(circle at 82% 25%, rgba(163,230,53,0.16), transparent 55%)",
+            "radial-gradient(circle at 82% 25%, rgba(226,34,45,0.22), transparent 55%)",
         }}
       >
         {/* next/image cannot be used inside ImageResponse — plain <img> is required here. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={logoSrc} width={116} height={116} style={{ borderRadius: 20 }} alt="" />
+        <img src={logoSrc} width={560} height={228} alt="" />
         <div
           style={{
-            marginTop: 44,
-            fontSize: 64,
-            fontWeight: 700,
-            color: "#FFFFFF",
-            letterSpacing: "-0.02em",
-          }}
-        >
-          KC Motors
-        </div>
-        <div
-          style={{
-            marginTop: 14,
-            fontSize: 32,
-            color: "#A3E635",
-            fontWeight: 600,
-          }}
-        >
-          Driving Trust
-        </div>
-        <div
-          style={{
-            marginTop: 28,
+            marginTop: 32,
             fontSize: 28,
-            color: "#C4C8D3",
+            color: "#A8A8A8",
             maxWidth: 820,
           }}
         >

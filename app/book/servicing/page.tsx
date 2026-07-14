@@ -14,6 +14,10 @@ export default function ServicingBookingPage() {
       pageTitle="Book Servicing with KC Motors in Carrick-on-Shannon"
       panelLabel="Service Booking"
       subject="Service Booking"
+      reminderOptIn={{
+        label: "Remind me when my next service is due",
+        note: "We'll give you a call or text ahead of your next service date.",
+      }}
     />
   );
 }

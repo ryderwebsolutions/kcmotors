@@ -52,14 +52,10 @@ export const metadata: Metadata = {
     title: "KC Motors | Garage, Tyres & Car Servicing in Carrick-on-Shannon",
     description: "Local, family-run garage in Carrick-on-Shannon. Tyres, servicing, pre-NCT checks and repairs.",
   },
-  icons: {
-    icon: "/images/kc-motors-logo.jpg",
-    apple: "/images/kc-motors-logo.jpg",
-  },
 };
 
 export const viewport = {
-  themeColor: "#1E2230",
+  themeColor: "#0D0D0D",
 };
 
 function JsonLd() {
@@ -69,7 +65,7 @@ function JsonLd() {
     name: "KC Motors",
     description:
       "Family-run garage in Carrick-on-Shannon offering tyres, car servicing, pre-NCT checks, brakes, batteries and diagnostics.",
-    image: `${siteUrl}/images/kc-motors-logo.jpg`,
+    image: `${siteUrl}/images/kc-motors-logo-wide.png`,
     url: siteUrl,
     telephone: business.phoneHref.replace("tel:", ""),
     email: business.email,

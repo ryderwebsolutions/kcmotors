@@ -4,7 +4,7 @@
 
 export const business = {
   name: "KC Motors",
-  tagline: "Driving Trust",
+  tagline: "Driven by Quality",
   legalDescriptor: "A family-run garage in Carrick-on-Shannon",
   phoneDisplay: "071 961 6809",
   phoneHref: "tel:+353719616809",

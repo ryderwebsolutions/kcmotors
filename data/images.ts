@@ -19,9 +19,9 @@ export const placeholderImages = {
     replaceNote: "Real KC Motors photo",
   },
   about: {
-    src: "/images/kcmotorsfront.png",
-    alt: "The KC Motors garage frontage on Castlecara Road, Carrick-on-Shannon",
-    replaceNote: "Real KC Motors photo",
+    src: "/images/placeholder/about-workshop.jpg",
+    alt: "A mechanic inspecting the underside of a car on a workshop ramp",
+    replaceNote: "Replace with a real KC Motors workshop image",
   },
   tyres: {
     src: "/images/placeholder/tyres.jpg",
@@ -47,5 +47,30 @@ export const placeholderImages = {
     src: "/images/placeholder/mechanic-at-work.jpg",
     alt: "Mechanic leaning into an engine bay working under a workshop light",
     replaceNote: "Replace with real KC Motors mechanic-at-work image",
+  },
+  brakes: {
+    src: "/images/placeholder/brakes.jpg",
+    alt: "Close-up of a car's brake disc and caliper",
+    replaceNote: "Replace with a real KC Motors brake job image",
+  },
+  battery: {
+    src: "/images/placeholder/battery.jpg",
+    alt: "Close-up of battery terminals in a workshop",
+    replaceNote: "Replace with a real KC Motors battery service image",
+  },
+  exhaust: {
+    src: "/images/placeholder/exhaust.jpg",
+    alt: "Close-up of a car's exhaust tips",
+    replaceNote: "Replace with a real KC Motors exhaust job image",
+  },
+  suspension: {
+    src: "/images/placeholder/suspension.jpg",
+    alt: "Close-up of a car's coil spring and shock absorber",
+    replaceNote: "Replace with a real KC Motors suspension job image",
+  },
+  airVent: {
+    src: "/images/placeholder/air-vent.jpg",
+    alt: "Close-up of a car dashboard air vent",
+    replaceNote: "Replace with a real KC Motors air conditioning service image",
   },
 } as const;

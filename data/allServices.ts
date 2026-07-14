@@ -3,17 +3,14 @@
 // This gives a comprehensive A–Z list, matching how most garage sites list
 // every service individually for search visibility.
 
-import { business } from "@/data/business";
-
 export type ServiceListItem = {
   name: string;
   groupSlug: string;
 };
 
-// Only tyres-wheels still has a dedicated on-page section (#tyres) — every
-// other group is reachable by calling, since there's no standalone page for it.
+// Every group has a dedicated page at /services/[slug] (see app/services/[slug]).
 export function serviceGroupHref(groupSlug: string): string {
-  return groupSlug === "tyres-wheels" ? "#tyres" : business.phoneHref;
+  return `/services/${groupSlug}`;
 }
 
 export const allServices: ServiceListItem[] = [

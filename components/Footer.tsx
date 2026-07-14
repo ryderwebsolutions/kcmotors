@@ -10,16 +10,13 @@ export default function Footer() {
     <footer className="bg-navy-950 pb-24 pt-10 text-navy-300 lg:pb-10">
       <div className="container-page grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2.5">
-            <Image
-              src="/images/kc-motors-logo.jpg"
-              alt="KC Motors logo"
-              width={40}
-              height={40}
-              className="h-10 w-10 rounded-md"
-            />
-            <span className="font-heading text-lg font-bold text-white">KC Motors</span>
-          </div>
+          <Image
+            src="/images/kc-motors-logo-wide.png"
+            alt="KC Motors — Driven by Quality"
+            width={1964}
+            height={801}
+            className="h-10 w-auto"
+          />
           <p className="mt-4 text-sm leading-relaxed">
             {business.legalDescriptor}. Tyres, servicing, pre-NCT checks and repairs for drivers
             in Carrick-on-Shannon and the surrounding area.
@@ -55,7 +52,7 @@ export default function Footer() {
             Services
           </h3>
           <ul className="mt-4 space-y-2 text-sm">
-            {services.slice(0, 6).map((s) => (
+            {services.map((s) => (
               <li key={s.slug}>
                 <a href={serviceGroupHref(s.slug)} className="hover:text-lime-400">
                   {s.name}

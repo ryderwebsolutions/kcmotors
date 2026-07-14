@@ -165,13 +165,14 @@ export default function Header() {
           <div className="group relative border-l border-white/15 pl-4 first:border-l-0 first:pl-0">
             <button
               type="button"
-              className="flex items-center gap-1 text-xs font-bold uppercase tracking-wide text-navy-200 transition-colors hover:text-lime-400"
+              className="flex items-center gap-1 text-xs font-bold uppercase tracking-wide text-navy-200 transition-colors hover:text-lime-400 focus-visible:text-lime-400"
+              aria-haspopup="true"
             >
               Repairs &amp; Services
-              <ChevronDownIcon className="h-3.5 w-3.5 transition-transform duration-150 group-hover:rotate-180" />
+              <ChevronDownIcon className="h-3.5 w-3.5 transition-transform duration-150 group-hover:rotate-180 group-focus-within:rotate-180" />
             </button>
 
-            <div className="invisible absolute left-1/2 top-full z-50 w-[640px] -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
+            <div className="invisible absolute left-1/2 top-full z-50 w-[640px] -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
               <div className="rounded-xl2 bg-navy-900 p-6 shadow-[0_20px_60px_rgba(0,0,0,0.35)] ring-1 ring-white/10">
                 <div className="grid grid-cols-3 gap-x-6 gap-y-1">
                   {allServices.map((item) => (

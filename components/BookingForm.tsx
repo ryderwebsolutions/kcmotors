@@ -12,6 +12,7 @@ type Props = {
   includeVehicleFields?: boolean;
   includeSchedule?: boolean;
   submitLabel?: string;
+  reminderOptIn?: { label: string; note: string };
 };
 
 type Values = {
@@ -23,6 +24,7 @@ type Values = {
   date: string;
   time: string;
   message: string;
+  remindMe: boolean;
 };
 
 const initialValues: Values = {
@@ -34,6 +36,7 @@ const initialValues: Values = {
   date: "",
   time: "",
   message: "",
+  remindMe: false,
 };
 
 export default function BookingForm({
@@ -44,6 +47,7 @@ export default function BookingForm({
   includeVehicleFields = true,
   includeSchedule = true,
   submitLabel = "Submit",
+  reminderOptIn,
 }: Props) {
   const [values, setValues] = useState<Values>(initialValues);
   const [sent, setSent] = useState(false);
@@ -69,6 +73,7 @@ export default function BookingForm({
             `Preferred Time: ${values.time || "Not specified"}`,
           ]
         : []),
+      ...(reminderOptIn ? [`Reminder opt-in: ${values.remindMe ? "Yes" : "No"}`] : []),
       "",
       values.message,
     ];
@@ -192,6 +197,25 @@ export default function BookingForm({
                       </div>
                     </Field>
                   </>
+                )}
+
+                {reminderOptIn && (
+                  <label className="flex items-start gap-2.5 rounded-md bg-white px-3.5 py-3 ring-1 ring-navy-200">
+                    <input
+                      type="checkbox"
+                      checked={values.remindMe}
+                      onChange={(e) =>
+                        setValues((v) => ({ ...v, remindMe: e.target.checked }))
+                      }
+                      className="mt-0.5 h-4 w-4 shrink-0 accent-lime-600"
+                    />
+                    <span className="text-[15px] text-navy-700">
+                      {reminderOptIn.label}
+                      <span className="mt-0.5 block text-xs text-navy-400">
+                        {reminderOptIn.note}
+                      </span>
+                    </span>
+                  </label>
                 )}
               </div>
 

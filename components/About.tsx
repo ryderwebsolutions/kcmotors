@@ -2,13 +2,6 @@ import Image from "next/image";
 import { business } from "@/data/business";
 import { placeholderImages } from "@/data/images";
 
-const thumbnails = [
-  placeholderImages.tools,
-  placeholderImages.oilChange,
-  placeholderImages.engineBay,
-  placeholderImages.tyres,
-];
-
 export default function About() {
   return (
     <section id="about" className="py-14 sm:py-16">
@@ -34,26 +27,14 @@ export default function About() {
           </a>
         </div>
 
-        <div>
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl2 shadow-card">
-            <Image
-              src={placeholderImages.about.src}
-              alt={placeholderImages.about.alt}
-              fill
-              sizes="(min-width: 1024px) 40vw, 100vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="mt-4 grid grid-cols-4 gap-3">
-            {thumbnails.map((img) => (
-              <div
-                key={img.src}
-                className="relative aspect-square overflow-hidden rounded-lg shadow-card"
-              >
-                <Image src={img.src} alt={img.alt} fill sizes="12vw" className="object-cover" />
-              </div>
-            ))}
-          </div>
+        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl2 shadow-card">
+          <Image
+            src={placeholderImages.about.src}
+            alt={placeholderImages.about.alt}
+            fill
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            className="object-cover"
+          />
         </div>
       </div>
     </section>
