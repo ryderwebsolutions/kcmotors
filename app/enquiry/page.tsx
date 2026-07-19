@@ -10,6 +10,7 @@ export default function EnquiryPage() {
   return (
     <BookingForm
       breadcrumbLabel="Enquiry"
+      breadcrumbPath="/enquiry"
       pageTitle="Contact KC Motors in Carrick-on-Shannon"
       panelLabel="General Enquiry"
       subject="General Enquiry"

@@ -11,6 +11,7 @@ export default function ServicingBookingPage() {
   return (
     <BookingForm
       breadcrumbLabel="Book Service"
+      breadcrumbPath="/book/servicing"
       pageTitle="Book Servicing with KC Motors in Carrick-on-Shannon"
       panelLabel="Service Booking"
       subject="Service Booking"

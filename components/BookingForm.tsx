@@ -3,9 +3,11 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
 import Link from "next/link";
 import { business } from "@/data/business";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 type Props = {
   breadcrumbLabel: string;
+  breadcrumbPath: string;
   pageTitle: string;
   panelLabel: string;
   subject: string;
@@ -41,6 +43,7 @@ const initialValues: Values = {
 
 export default function BookingForm({
   breadcrumbLabel,
+  breadcrumbPath,
   pageTitle,
   panelLabel,
   subject,
@@ -86,6 +89,12 @@ export default function BookingForm({
 
   return (
     <section className="py-10 sm:py-14">
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: breadcrumbLabel, path: breadcrumbPath },
+        ]}
+      />
       <div className="container-page">
         <nav aria-label="Breadcrumb" className="text-sm text-navy-400">
           <Link href="/" className="hover:text-lime-700">

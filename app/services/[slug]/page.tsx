@@ -7,6 +7,7 @@ import { allServices } from "@/data/allServices";
 import { placeholderImages } from "@/data/images";
 import { business } from "@/data/business";
 import { serviceIcons, PhoneIcon, CheckIcon } from "@/components/Icons";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 
 export const dynamicParams = false;
 
@@ -96,6 +97,12 @@ export default async function ServicePage({
   return (
     <>
       <ServiceJsonLd service={service} />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", path: "/" },
+          { name: service.name, path: `/services/${service.slug}` },
+        ]}
+      />
 
       <section className="bg-navy-900 py-14 sm:py-16">
         <div className="container-page">

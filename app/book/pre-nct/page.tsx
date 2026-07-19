@@ -11,6 +11,7 @@ export default function PreNctBookingPage() {
   return (
     <BookingForm
       breadcrumbLabel="Pre-NCT Booking"
+      breadcrumbPath="/book/pre-nct"
       pageTitle="Book Your Pre-NCT Check with KC Motors in Carrick-on-Shannon"
       panelLabel="Pre-NCT Check Booking"
       subject="Pre-NCT Check Booking"
